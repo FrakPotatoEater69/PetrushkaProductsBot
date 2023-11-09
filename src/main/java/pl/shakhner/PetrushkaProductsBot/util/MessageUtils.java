@@ -29,58 +29,57 @@ import java.util.Map;
 @Component
 @Slf4j
 public class MessageUtils {
-    public static final String HELP_MESSAGE = "Если что-то идёт не так - просто отправь мне отмена, или введи /developer и свяжись с разработчиком";
-    public static final String DEVELOPER_HELP = "Если у тебя возникли неразрешимые проблемы - напиши мне @luv_scars_KO";
-    public static final String INFO = "Привет, я - бот Petrushka Products! \uD83D\uDED2 Я помогу тебе выбрать свежие овощи, фрукты и другие продукты, а затем доставлю их прямо к твоей двери \uD83D\uDE9A\uD83D\uDCA8 Просто выбирай товары, добавляй их в корзину и делай заказ. Отправь мне /help если что-то идёт не так.\n" +
+    public static final String HELP_MESSAGE = "If something goes wrong, just send me 'cancel', or type /developer and contact the developer.";
+    public static final String DEVELOPER_HELP = "If you have unresolved issues, write to me @luv_scars_KO.";
+    public static final String INFO = "Hello, I am Petrushka Products bot! \uD83D\uDED2 I will help you choose fresh vegetables, fruits, and other products, and then deliver them right to your door \uD83D\uDE9A\uD83D\uDCA8 Just select items, add them to your cart, and place an order. Send me /help if something goes wrong.\n" +
             "\n" +
-            "Важно знать, что я оборудован системой антиспама. Это означает, что если ты отправляешь сообщения слишком часто (больше одного в секунду), я не буду на них отвечать. Помни об этом!\n" +
+            "It's important to know that I have an anti-spam system. This means that if you send messages too frequently (more than one per second), I won't respond to them. Keep that in mind!\n" +
             "\n" +
-            "Для начала работы просто отправь мне 'Каталог' или используй кнопки внизу. Приятного выбора и вкусных покупок! \uD83E\uDD66\uD83C\uDF4E\uD83D\uDED2" +
+            "To get started, just send me 'Catalog' or use the buttons below. Enjoy your shopping and tasty choices! \uD83E\uDD66\uD83C\uDF4E\uD83D\uDED2" +
             "\n" +
-            "Помни, что корзина пользоваталей, для экономим места, обновляется каждую полночь, так что не затягивай с покупками";
-    public static final String MAILING_WAS_ENDED = "Рассылка закончена, кол-во пользователей, получивших сообщение: ";
+            "Remember that the user's cart is updated every midnight to save space, so don't delay your purchases.";
+    public static final String MAILING_WAS_ENDED = "Mailing has ended, number of users who received the message: ";
     @Value("${manager.number}")
     private String managerNumber;
-    public static final String SUCCESSFULLY_ADDED = "Успешно добавлено";
-    public static final String SUCCESSFULLY_DELETED = "Товар успешно удалён";
-    public static final String UNSUPPORTED_COMMAND = "Такой команды не существует, воспользуйтесь меню";
-    public static final String ADMIN_WARNING = "Чтобы добавить новый продукт, отправьте фотографию продукта, НЕ СЖИМАЯ, в описании картинки впиши команду /addFruit , /addHerd , /addVegetable , /addBerry " +
-            "в зависимости от типа продукта, и НАЗВАНИЕ/ОПИСАНИЕ/ЦЕНА" +
+    public static final String SUCCESSFULLY_ADDED = "Successfully added";
+    public static final String SUCCESSFULLY_DELETED = "Product successfully deleted";
+    public static final String UNSUPPORTED_COMMAND = "This command does not exist, use the menu.";
+    public static final String ADMIN_WARNING = "To add a new product, send a photo of the product, WITHOUT COMPRESSING it, in the image description, include the command /addFruit, /addHerd, /addVegetable, /addBerry, depending on the product type, and NAME/DESCRIPTION/PRICE" +
             "\n" +
-            "Пример:\n" +
-            "/addFruit Банан/Вкусный банан/4.39";
-    public static final String ITEM_NOT_FOUND_WARNING = "Этот товар не существует, скорее всего, он был удалён";
-    public static final String END_EVERY_ORDER_WARNING = "Пожалуйста, заканчивай каждое добавление в корзину до конца.";
-    public static final String ENTER_KG_AMOUNT = "Введи количество товара в килограммах\nИли введи отмена";
-    public static final String ENTER_PCS_AMOUNT = "Введи количество товара в штуках\nИли введи отмена";
-    public static final String INCORRECT_DIGIT_INPUT_WARNING = "Некорректный ввод числа, пример:\n2.2\n2,2\n2\nИли введите отмена";
-    public static final String CANCEL_ORDER = "Люда! Неси отмену!";
-    public static final String NOTHING_TO_CANCEL = "Я зря Люду звать не буду, нечего отменять";
-    public static final String CART_IS_EMPTY = "Твоя корзина пуста, пора что-то купить!";
-    public static final String INCORRECT_ROUND_DIGIT_INPUT_WARNING = "Поштучно товар можно заказать только целым, введи пожалуйста количество";
-    public static final String SUCCESSFULLY_ADDED_TO_CART = "Товар добавлен в корзину";
-    public static final String INCOMPATIBLE_UNITS = "У тебя в корзине уже есть этот товар, но в других единицах измерения.\nПожалуйста, выбери что-то одно";
-    public static final String DELETE_ITEM_FROM_CART_MESSAGE = "Введи порядковый номер (цифра слева) продукта";
-    public static final String INCORRECT_ORDINAL_NUMBER_INPUT_WARNING = "Введите порядковый номер товара в корзине или введите отмена";
-    public static final String SUCCESSFULLY_DELETED_FROM_CART = "Принято, удалил";
-    public static final String CART_DOES_NOT_CONTAIN_SUCH_A_ORDINAL_NUMBER = "У тебя в корзине нет такого товара\nВведи номер товара из корзины или введи отмена";
-    public static final String INSERT_NEW_AMOUNT = "Введи новую цену через точку или запятую, для отмены нажми отмена";
-    public static final String INCORRECT_PRICE_INPUT_WARNING = "Цена введена неверно, пожалуйста, введи новую цену товара, пример:\n 5.1\n12,1\n7";
-    public static final String CANCEL_ADMIN = "Изменение цены отменено";
-    public static final String PRICE_SUCCESSFULLY_CHANGED = "Цена товара изменена";
-    public static final String INSERT_MOBILE_NUMBER = "Введите свой мобильный номер в формате:\n+375(29,44,25)7777777";
-    public static final String NUMBER_ACCEPTED_WAIT_FOR_ADDRESS = "Теперь введи свой адрес";
-    public static final String FINISH_ORDER_WARNING = "Пожалуйста, закончите оформление заказа или введите отмена";
-    public static final String WRONG_NUMBER_INPUT = "Ты неправильно ввёл номер, вот пример:\n+375446667722\n+375296665544\n+375256667744\nИли введи отмена, чтобы отменить заказ";
-    public static final String ORDER_CANCELLED = "Заказ отменён";
-    public static final String ADDRESS_ACCEPTED = "Адрес принят, доставим в лучше виде";
+            "Example:\n" +
+            "/addFruit Banana/Delicious banana/4.39";
+    public static final String ITEM_NOT_FOUND_WARNING = "This product does not exist, it was most likely deleted.";
+    public static final String END_EVERY_ORDER_WARNING = "Please finish each cart addition completely.";
+    public static final String ENTER_KG_AMOUNT = "Enter the quantity of the product in kilograms\nOr enter 'cancel'.";
+    public static final String ENTER_PCS_AMOUNT = "Enter the quantity of the product in pieces\nOr enter 'cancel'.";
+    public static final String INCORRECT_DIGIT_INPUT_WARNING = "Incorrect number input, example:\n2.2\n2,2\n2\nOr enter 'cancel'.";
+    public static final String CANCEL_ORDER = "Luda! Bring the cancellation!";
+    public static final String NOTHING_TO_CANCEL = "I won't call Luda in vain, there's nothing to cancel.";
+    public static final String CART_IS_EMPTY = "Your cart is empty, it's time to buy something!";
+    public static final String INCORRECT_ROUND_DIGIT_INPUT_WARNING = "You can only order whole items, please enter the quantity.";
+    public static final String SUCCESSFULLY_ADDED_TO_CART = "Product added to the cart.";
+    public static final String INCOMPATIBLE_UNITS = "You already have this product in your cart, but in different units of measurement.\nPlease choose one.";
+    public static final String DELETE_ITEM_FROM_CART_MESSAGE = "Enter the ordinal number (number on the left) of the product.";
+    public static final String INCORRECT_ORDINAL_NUMBER_INPUT_WARNING = "Enter the ordinal number of the product in the cart or enter 'cancel'.";
+    public static final String SUCCESSFULLY_DELETED_FROM_CART = "Accepted, deleted.";
+    public static final String CART_DOES_NOT_CONTAIN_SUCH_A_ORDINAL_NUMBER = "You don't have such a product in your cart.\nEnter the product number from the cart or enter 'cancel'.";
+    public static final String INSERT_NEW_AMOUNT = "Enter a new price using a dot or comma, to cancel press 'cancel'.";
+    public static final String INCORRECT_PRICE_INPUT_WARNING = "Price entered incorrectly, please enter the new price of the product, for example:\n 5.1\n12,1\n7";
+    public static final String CANCEL_ADMIN = "Price change canceled.";
+    public static final String PRICE_SUCCESSFULLY_CHANGED = "Product price changed.";
+    public static final String INSERT_MOBILE_NUMBER = "Enter your mobile number in the format:\n+375(29,44,25)7777777";
+    public static final String NUMBER_ACCEPTED_WAIT_FOR_ADDRESS = "Now enter your address.";
+    public static final String FINISH_ORDER_WARNING = "Please complete the order or enter 'cancel'.";
+    public static final String WRONG_NUMBER_INPUT = "You entered the number incorrectly, here is an example:\n+375446667722\n+375296665544\n+375256667744\nOr enter 'cancel' to cancel the order.";
+    public static final String ORDER_CANCELLED = "Order canceled.";
+    public static final String ADDRESS_ACCEPTED = "Address accepted, we will deliver it in the best condition.";
     public String ORDER_LIMIT_WARNING;
     public String CART_LIMIT_WARNING;
-    private static final String FRUIT_MENU = "Меню фруктов";
-    private static final String VEGETABLE_MENU = "Меню овощей";
-    private static final String HERB_MENU = "Меню трав";
-    private static final String BERRY_MENU = "Меню ягод";
-    private static final String CHOOSE_UNIT = "Как хочешь сделать заказ?\nВ килограммах или поштучно?\n\nДля отмены отправь мне Отмена";
+    private static final String FRUIT_MENU = "Fruit menu";
+    private static final String VEGETABLE_MENU = "Vegetable menu";
+    private static final String HERB_MENU = "Herb menu";
+    private static final String BERRY_MENU = "Berry menu";
+    private static final String CHOOSE_UNIT = "How do you want to place an order?\nIn kilograms or per piece?\n\nTo cancel, send me 'Cancel'.";
 
 
     private final ItemService itemService;
@@ -93,21 +92,20 @@ public class MessageUtils {
         this.userDataCache = userDataCache;
         this.keyboardUtils = keyboardUtils;
 
-        ORDER_LIMIT_WARNING = "Заказать больше 15 килограмм или 100 штук одного продукта можно только по номеру: " + managerNumber;
+        ORDER_LIMIT_WARNING = "You can order more than 15 kilograms or 100 pieces of the same product only by calling: " + managerNumber;
     }
 
     @PostConstruct
     private void warnings(){
-        ORDER_LIMIT_WARNING = "Заказать больше 15 килограмм или 100 штук одного продукта можно только по номеру: " + managerNumber;
-        CART_LIMIT_WARNING = "Можно заказать только 15 товаров за 1 заказ, для заказа большего количества товаров позвоните по номеру: " + managerNumber;
-
+        ORDER_LIMIT_WARNING = "You can order more than 15 kilograms or 100 pieces of the same product only by calling: " + managerNumber;
+        CART_LIMIT_WARNING = "You can order only 15 items in one order, to order more items, call the following number: " + managerNumber;
     }
 
-    public static final String WELCOME_MESSAGE = "Ола, Амигос!\nЗдесь мы не только предлагаем самые свежие продукты, но и доставляем их прямо к вашей двери. Теперь вы можете запастись витаминами, не выходя из дома!\n" +
+    public static final String WELCOME_MESSAGE = "Hello, Amigos!\nHere, we not only offer the freshest products but also deliver them right to your door. Now you can stock up on vitamins without leaving your home!\n" +
             "\n" +
-            "Наша команда работает усердно, чтобы вы получали только лучшее. Наши овощи и фрукты такие свежие, что они могут сказать вам последние новости из огорода!" +
-            "\n для начала работы напиши каталог или воспользуйся кнопками снизу";
-    private static final String CHOOSE_FRUITS_OR_VEGETABLES_TEXT = "Выбери от чего будешь кайфовать";
+            "Our team works diligently to ensure that you receive only the best. Our vegetables and fruits are so fresh that they can tell you the latest news from the garden!" +
+            "\nTo get started, type 'catalog' or use the buttons below.";
+    private static final String CHOOSE_FRUITS_OR_VEGETABLES_TEXT = "Choose what you'll enjoy";
 
     @Value("${main.menu.picture}")
     private String mainMenuPicFileId;
@@ -138,7 +136,7 @@ public class MessageUtils {
     public SendPhoto generateMainCatalog(Update update) {
         SendPhoto sendPhoto = generateSendPhoto(update, CHOOSE_FRUITS_OR_VEGETABLES_TEXT);
         sendPhoto.setPhoto(new InputFile(mainMenuPicFileId));
-        sendPhoto.setReplyMarkup(keyboardUtils.getFruitsOrVegetablesKeyboard(update));
+        sendPhoto.setReplyMarkup(keyboardUtils.getFruitsOrVegetablesKeyboard());
         return sendPhoto;
     }
 
@@ -228,13 +226,13 @@ public class MessageUtils {
     }
 
     private String getPersonalItemText(Item item){
-        String personalText = item.getTitle() + "\n\n" + item.getDescription() + "\n\n" + "Цена: " + item.getPrice() + " рублей за кг";
+        String personalText = item.getTitle() + "\n\n" + item.getDescription() + "\n\n" + "Price: " + item.getPrice() + " $ for kg";
 
         return personalText;
     }
     public EditMessageCaption getMainCatalogCapture(Update update) {
         EditMessageCaption editMessageCaption = new EditMessageCaption();
-        editMessageCaption.setReplyMarkup(keyboardUtils.getFruitsOrVegetablesKeyboard(update));
+        editMessageCaption.setReplyMarkup(keyboardUtils.getFruitsOrVegetablesKeyboard());
         editMessageCaption.setChatId(chatIdExtractor.extractChatIdFromUpdate(update));
         editMessageCaption.setMessageId(update.getCallbackQuery().getMessage().getMessageId());
         editMessageCaption.setCaption(CHOOSE_FRUITS_OR_VEGETABLES_TEXT);
@@ -328,8 +326,8 @@ public class MessageUtils {
 
         for (ItemPriceTitleDTO itemDTO : itemList) {
             ItemInCart itemInCart = userCart.get(itemDTO.getId());
-            sb.append(userCartData.getOrdinalItemNumberItemId().get(itemDTO.getId())).append(". Товар: ").append(itemDTO.getTitle()).append(" ").append("Цена: ").append(itemDTO.getPrice()).append(" рублей за кг, ").
-                    append("Кол-во: ").append(itemInCart.getAmount()).append(" ").append(itemInCart.getUnit().getTitle()).append("\n");
+            sb.append(userCartData.getOrdinalItemNumberItemId().get(itemDTO.getId())).append(". Item: ").append(itemDTO.getTitle()).append(" ").append("Price: ").append(itemDTO.getPrice()).append(" $ for kg, ").
+                    append("qty: ").append(itemInCart.getAmount()).append(" ").append(itemInCart.getUnit().getTitle()).append("\n");
         }
 
         return sb.toString();
@@ -348,11 +346,11 @@ public class MessageUtils {
 
         for (ItemPriceTitleDTO itemDTO : itemList) {
             ItemInCart itemInCart = userCart.get(itemDTO.getId());
-            sb.append(userCartData.getOrdinalItemNumberItemId().get(itemDTO.getId())).append(". Товар: ").append(itemDTO.getTitle()).append(" ").append("Цена: ").append(itemDTO.getPrice()).append(" рублей за кг, ").
-                    append("Кол-во: ").append(itemInCart.getAmount()).append(" ").append(itemInCart.getUnit().getTitle()).append("\n");
+            sb.append(userCartData.getOrdinalItemNumberItemId().get(itemDTO.getId())).append(". Item: ").append(itemDTO.getTitle()).append(" ").append("Price: ").append(itemDTO.getPrice()).append(" $ for kg, ").
+                    append("qty: ").append(itemInCart.getAmount()).append(" ").append(itemInCart.getUnit().getTitle()).append("\n");
         }
 
-        sb.append("номер: ").append(userCartData.getNumber()).append("\nадрес: ").append(userCartData.getAddress());
+        sb.append("Number: ").append(userCartData.getNumber()).append("\naddress: ").append(userCartData.getAddress());
 
         return sb.toString();
     }

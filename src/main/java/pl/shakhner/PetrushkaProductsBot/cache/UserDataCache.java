@@ -160,7 +160,6 @@ public class UserDataCache {
         String ordinalNumberText = update.getMessage().getText();
 
         if (itemIdOrdinalIdMap.containsValue(Integer.valueOf(ordinalNumberText))) {
-            // Найдите соответствующий элемент по ordinalNumber
             long itemIdToRemove = -1;
 
             for (Map.Entry<Long, Integer> entry : itemIdOrdinalIdMap.entrySet()) {

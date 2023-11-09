@@ -14,8 +14,6 @@ import java.util.List;
 public interface ItemRepository extends JpaRepository<Item, Long> {
     List<Item> findByType(ItemType itemType);
 
-    List<Item> findAllByType(ItemType itemType, Pageable pageable);
-
     @Query("SELECT new pl.shakhner.PetrushkaProductsBot.dto.ItemPriceTitleDTO(i.id, i.price, i.title) FROM Item i WHERE i.id IN :itemIds")
     List<ItemPriceTitleDTO> findPricesTitlesById(List<Long> itemIds);
 }

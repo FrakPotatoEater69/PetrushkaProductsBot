@@ -1,8 +1,8 @@
 package pl.shakhner.PetrushkaProductsBot.botAPI;
 
 public enum Unit {
-    kg("Кг"),
-    pcs("Штук");
+    kg("Kg"),
+    pcs("Pcs");
 
     private String title;
     Unit(String title) {

@@ -48,7 +48,6 @@ public class ItemService {
     }
 
     public List<Item> findByType(ItemType itemType){
-        //TODO Add pagination!!!!!!!!!!!!!!
         List<Item> itemList = itemRepository.findByType(itemType);
 
         return itemList;
@@ -117,7 +116,7 @@ public class ItemService {
         String[] dataArray = caption.split("/");
 
         if (dataArray.length != 3)
-            throw new ItemNotSaveException("Неправильно перечисление");
+            throw new ItemNotSaveException("Incorrect enum");
         Item item = new Item();
 
         try {

@@ -34,15 +34,15 @@ public class KeyboardUtils {
 
         KeyboardRow keyboardrow = new KeyboardRow();
 
-        keyboardrow.add("Каталог");
-        keyboardrow.add("Моя корзина");
+        keyboardrow.add("Catalog");
+        keyboardrow.add("My cart");
 
         rows.add(keyboardrow);
 
         keyboardrow = new KeyboardRow();
 
-        keyboardrow.add("Информация и помощь");
-        keyboardrow.add("Абсолютно бесполезная кнопка");
+        keyboardrow.add("Information And Help");
+        keyboardrow.add("Useless button");
 
         rows.add(keyboardrow);
 
@@ -52,7 +52,7 @@ public class KeyboardUtils {
         return replyKeyboard;
     }
 
-    public InlineKeyboardMarkup getFruitsOrVegetablesKeyboard(Update update) {
+    public InlineKeyboardMarkup getFruitsOrVegetablesKeyboard() {
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
 
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();

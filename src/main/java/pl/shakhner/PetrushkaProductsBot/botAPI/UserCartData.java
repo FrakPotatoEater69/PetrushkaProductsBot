@@ -1,10 +1,8 @@
 package pl.shakhner.PetrushkaProductsBot.botAPI;
 
-import jakarta.validation.constraints.Pattern;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import pl.shakhner.PetrushkaProductsBot.exceptions.IllegalAmountException;
 import pl.shakhner.PetrushkaProductsBot.exceptions.IncompatibleUnitsException;
-import pl.shakhner.PetrushkaProductsBot.util.ExceptionUtils;
 import pl.shakhner.PetrushkaProductsBot.util.Extractor;
 
 import java.util.HashMap;
@@ -36,7 +34,7 @@ public class UserCartData {
         Long itemId = transitionalItem.getItemId();
 
         if(!itemsInCart.get(itemId).getUnit().equals(transitionalItem.getUnit()))
-            throw new IncompatibleUnitsException("Единица измерения существующего в корзине товара д|ругая.\nУдалите товар из корзины и добавьте заново");
+            throw new IncompatibleUnitsException("Единица измерения существующего в корзине товара другая.\nУдалите товар из корзины и добавьте заново");
         else if(itemsInCart.get(itemId).getUnit().equals(Unit.pcs)){
             if(itemsInCart.get(itemId).getAmount() + transitionalItem.getAmount() > 100)
                 throw new IllegalAmountException(Extractor.extractChatIdFromUpdate(update), Extractor.extractFirstnameFromUpdate(update));

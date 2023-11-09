@@ -123,10 +123,10 @@ public class UpdateController {
         } else {
             switch (messageText) {
                     case "/start" -> registerUser(update);
-                    case "Каталог", "каталог" -> sendCatalogToUser(update);
-                    case "отмена", "Отмена" -> cancelOrder(update);
-                    case "Моя корзина" -> sendCartToUser(update);
-                    case "Информация и помощь" -> infoRequestReceived(update);
+                    case "Catalog", "catalog" -> sendCatalogToUser(update);
+                    case "cancel", "Cancel" -> cancelOrder(update);
+                    case "My cart" -> sendCartToUser(update);
+                    case "Info and help" -> infoRequestReceived(update);
                     default -> unsupportedMessageReceived(update);
             }
         }
@@ -264,7 +264,7 @@ public class UpdateController {
                 userCartData.setNumber(messageText);
                 sendMessage = messageUtils.generateSendMessage(update, messageUtils.NUMBER_ACCEPTED_WAIT_FOR_ADDRESS);
                 userDataCache.setCurrentBotState(update, BotState.WAIT_FOR_ADDRESS);
-            }else if(messageText.equalsIgnoreCase("отмена")){
+            }else if(messageText.equalsIgnoreCase("cancel")){
                 sendMessage = messageUtils.generateSendMessage(update, messageUtils.ORDER_CANCELLED);
                 userDataCache.setCurrentBotState(update, BotState.MAIN);
             }else {
@@ -286,7 +286,7 @@ public class UpdateController {
         }else {
             String messageText = update.getMessage().getText();
 
-            if(messageText.equalsIgnoreCase("отмена")){
+            if(messageText.equalsIgnoreCase("cancel")){
                 sendMessage = messageUtils.generateSendMessage(update, messageUtils.ORDER_CANCELLED);
                 userDataCache.setCurrentBotState(update, BotState.MAIN);
             }else {
@@ -295,7 +295,7 @@ public class UpdateController {
 
                 Long customerChatId = Extractor.extractChatIdFromUpdate(update);
 
-                sendOrderToAdmins(userCartData, customerChatId);
+                sendOrderToAdmins(userCartData);
 
                 userDataCache.getUserCart().remove(customerChatId);
             }
@@ -338,7 +338,7 @@ public class UpdateController {
         }else {
             userDataCache.clearCart(update);
             logUtils.writeDefaultLogInfoMessage(update, "sent a request to reset their cart");
-            sendMessage = messageUtils.generateSendMessage(update, "Корзина очищена");
+            sendMessage = messageUtils.generateSendMessage(update, "Cart has been cleared");
         }
 
         setMainKeyboardAndExecute(sendMessage);
@@ -348,7 +348,7 @@ public class UpdateController {
     private void processOrdinalNumber(Update update, String messageText) {
         if(DoubleValidator.isRound(messageText)) {
             doubleDigitReceived(update);
-        }else if(messageText.equalsIgnoreCase("отмена")) {
+        }else if(messageText.equalsIgnoreCase("cancel")) {
             cancelOrder(update);
         }else
             sendIncorrectDigitInputWarning(update);
@@ -360,14 +360,14 @@ public class UpdateController {
                 .getUnit().equals(Unit.pcs)){
             if(DoubleValidator.isRound(messageText)){
                 doubleDigitReceived(update);
-            }else if(messageText.equalsIgnoreCase("отмена")) {
+            }else if(messageText.equalsIgnoreCase("cancel")) {
                 cancelOrder(update);
             }else {
                 sendIncorrectDigitInputWarning(update);
             }
         } else if(DoubleValidator.isDouble(messageText)) {
             doubleDigitReceived(update);
-        }else if(messageText.equalsIgnoreCase("отмена")) {
+        }else if(messageText.equalsIgnoreCase("cancel")) {
             cancelOrder(update);
         }else
             sendIncorrectDigitInputWarning(update);
@@ -390,7 +390,7 @@ public class UpdateController {
             adminDataCache.removeAdminFromCache(update);
             SendMessage sendMessage = messageUtils.generateSendMessage(update, messageUtils.PRICE_SUCCESSFULLY_CHANGED);
             executeMessage(sendMessage);
-        }else if(messageText.equalsIgnoreCase("отмена")) {
+        }else if(messageText.equalsIgnoreCase("cancel")) {
             cancelOrder(update);
         }else
             sendIncorrectNewPriceWarning(update);
@@ -774,7 +774,7 @@ public class UpdateController {
         executeMessage(sendMessage);
     }
 
-    private void sendOrderToAdmins(UserCartData userCartData, Long customerChatId) {
+    private void sendOrderToAdmins(UserCartData userCartData) {
         List<Long> adminIds = adminValidator.getOwners();
 
         String dataCart = messageUtils.generateUserCart(userCartData);
