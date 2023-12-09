@@ -3,8 +3,6 @@ bot.token=
 
 service.file_info.uri=https://api.telegram.org/bot{token}/getFile?file_id={fileId}
 service.file_storage.uri=https://api.telegram.org/file/bot{token}/{filePath}
-owners=
-manager.number=
 server.port=8084
 
 bot.uri=
@@ -23,6 +21,9 @@ spring.jpa.hibernate.ddl-auto=update
 spring.task.scheduling.pool.size=3
 
 logging.level.root=INFO
+
+owners=
+manager.number=
 
 main.menu.picture=
 berry.subCatalog.picture=

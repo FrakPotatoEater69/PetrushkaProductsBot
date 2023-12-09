@@ -30,8 +30,8 @@ public class TelegramBot extends TelegramWebhookBot {
         this.config = config;
         this.updateController = updateController;
         List<BotCommand> botCommands = new ArrayList<>();
-        botCommands.add(new BotCommand("/help", "Получить помощь"));
-        botCommands.add(new BotCommand("/developer", "Связь с разработчиком"));
+        botCommands.add(new BotCommand("/help", "Get help"));
+        botCommands.add(new BotCommand("/developer", "Contact the developer"));
         try {
             execute(new SetMyCommands(botCommands, new BotCommandScopeDefault(), null));
         } catch (TelegramApiException e) {

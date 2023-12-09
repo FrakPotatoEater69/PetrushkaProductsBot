@@ -41,7 +41,7 @@ public class KeyboardUtils {
 
         keyboardrow = new KeyboardRow();
 
-        keyboardrow.add("Information And Help");
+        keyboardrow.add("Information and Help");
         keyboardrow.add("Useless button");
 
         rows.add(keyboardrow);

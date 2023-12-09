@@ -18,6 +18,7 @@ import pl.shakhner.PetrushkaProductsBot.exceptions.UploadFileException;
 import pl.shakhner.PetrushkaProductsBot.models.Item;
 import pl.shakhner.PetrushkaProductsBot.repositories.ItemRepository;
 import pl.shakhner.PetrushkaProductsBot.util.ButtonUtils;
+import pl.shakhner.PetrushkaProductsBot.util.DoubleValidator;
 import pl.shakhner.PetrushkaProductsBot.util.LogUtils;
 import pl.shakhner.PetrushkaProductsBot.util.MessageUtils;
 
@@ -123,7 +124,7 @@ public class ItemService {
             item.setImage(fileInByte);
             item.setTitle(dataArray[0]);
             item.setDescription(dataArray[1]);
-            item.setPrice(Double.valueOf(dataArray[2]));
+            item.setPrice(DoubleValidator.parseDouble(dataArray[2]));
             item.setType(itemType);
         }catch (Exception e) {
             throw new ItemNotSaveException("Неверно указаны поля");

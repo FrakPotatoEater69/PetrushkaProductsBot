@@ -126,7 +126,7 @@ public class UpdateController {
                     case "Catalog", "catalog" -> sendCatalogToUser(update);
                     case "cancel", "Cancel" -> cancelOrder(update);
                     case "My cart" -> sendCartToUser(update);
-                    case "Info and help" -> infoRequestReceived(update);
+                    case "Information and Help" -> infoRequestReceived(update);
                     default -> unsupportedMessageReceived(update);
             }
         }
