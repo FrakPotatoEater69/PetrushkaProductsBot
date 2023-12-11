@@ -65,7 +65,7 @@ Let's start with the main functions for users
 To get the main catalog, you need to use the relevant button.
 How to use the bot is, of course, described the first time you contact it, so you don’t need to read the readme file😁, but I don’t see the point in showing introductory messages and other not very important things.
 
-![main menu](https://od.lk/s/NDZfNDA2Njg5NzFf/main%201.png)
+![main menu](screenshots/main 1.png)
 
 Next, the user must select the required section.
 As an example, I give a catalog of vegetables and berries.
