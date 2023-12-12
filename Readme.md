@@ -75,7 +75,7 @@ As you can see, each section has its own picture, to change it - just replace th
 
 Empty vegetables catalog | Empty berries catalog
 :-: | :-:|
-![VEGE](screenshots/emptyVege.png) | ![BERRY](screenshots/emptyBerry.png)
+<img src="screenshots/emptyVege.png" alt="VEGE" /> | <img src="screenshots/emptyBerry.png" alt="BERRY" />
 
 Here I will show you an example of an empty catalog. Only an admin can [add a product](#adding-a-new-product). To [add an admin](#work-with-application.properties-file), just add his chatId to the application.properties file.
 
