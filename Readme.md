@@ -194,6 +194,7 @@ If this is done by a user and not an administrator, he will receive an error mes
 Correction proposal for admin | Non-admin user attempt to add
 :-:|:-:
 ![command mistake](screenshots/command%20mistake.png =500x) | ![user trying to add Berry](screenshots/user%20trying%20to%20add%20Berry.png)
+
 **Product successfully added:**
 <p align = "center">
 <img src="https://od.lk/s/NDZfNDA3OTEyNTNf/addBerry.png =400x" height = 300px />
