@@ -81,9 +81,11 @@ Here I will show you an example of an empty catalog. Only an admin can [add a pr
 
 Here is an example of a berry catalog consisting of 1, 2 and 3 products respectively. The list builds **automatically**, you do not need to add rows and columns manually.
 
-![BERRY 1](screenshots/1%20berry.png)
+<p align="center">
+<img src="screenshots/1%20berry.png" alt="BERRY 1" height = 300px />
+</p>
 
-![BERRY 2](screenshots/2%20ber.png) | ![BERRY 3](screenshots/3%20ber.png)
+<img src="screenshots/2%20ber.png" alt="BERRY 2" height = 300px />| <img src="screenshots/3%20ber.png" alt="BERRY 3" height = 300px />
 :-:|:-:
 
 The product page consists of it's name, price and description, as well as a personal picture, which is stored in the database. How to [add a product](#adding-a-new-product) is discussed in the relevant chapter.
