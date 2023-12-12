@@ -83,10 +83,12 @@ Here is an example of a berry catalog consisting of 1, 2 and 3 products respecti
 
 <p align="center">
 <img src="screenshots/1%20berry.png" alt="BERRY 1" height = 300px />
-</p>
+
 
 <img src="screenshots/2%20ber.png" alt="BERRY 2" height = 300px />| <img src="screenshots/3%20ber.png" alt="BERRY 3" height = 300px />
 :-:|:-:
+
+</p>
 
 The product page consists of it's name, price and description, as well as a personal picture, which is stored in the database. How to [add a product](#adding-a-new-product) is discussed in the relevant chapter.
 I would like to note that the personal product page for the admin and for the user is [different](#editing-a-product).
