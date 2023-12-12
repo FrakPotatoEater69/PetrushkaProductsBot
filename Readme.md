@@ -73,21 +73,21 @@ As you can see, each section has its own picture, to change it - just replace th
 
 Empty vegetables catalog | Empty berries catalog
 :-: | :-:|
-![VEGE](https://od.lk/s/NDZfNDA2NzMzMDNf/emptyVege.png =300x)|![BERRY](https://od.lk/s/NDZfNDA2NzMzMDRf/emptyBerry.png =350x)
+![VEGE](screenshots/emptyVege.png =300x) | ![BERRY](screenshots/emptyBerry.png =350x)
 
 Here I will show you an example of an empty catalog. Only an admin can [add a product](#adding-a-new-product). To [add an admin](#work-with-application.properties-file), just add his chatId to the application.properties file.
 
 Here is an example of a berry catalog consisting of 1, 2 and 3 products respectively. The list builds **automatically**, you do not need to add rows and columns manually.
 
-![BERRY 1](https://od.lk/s/NDZfNDA2NzUyMTJf/1%20berry.png) 
+![BERRY 1](screenshots/1%20berry.png)
 
-![BERRY 2](https://od.lk/s/NDZfNDA2NzUyMDZf/2%20ber.png)| ![BERRY 3](https://od.lk/s/NDZfNDA2NzUyMDlf/3%20ber.png)
+![BERRY 2](screenshots/2%20ber.png) | ![BERRY 3](screenshots/3%20ber.png)
 :-:|:-:
 
 The product page consists of it's name, price and description, as well as a personal picture, which is stored in the database. How to [add a product](#adding-a-new-product) is discussed in the relevant chapter.
 I would like to note that the personal product page for the admin and for the user is [different](#editing-a-product).
 
-![cranberry personal page](https://od.lk/s/NDZfNDA2Nzc3OTZf/cran%20pers%20usr.png)
+![cranberry personal page](screenshots/cran%20pers%20usr.png)
 
 You can go back from any part of the catalog, one certain message will be updated so the chat will not be clogged.
 
@@ -96,7 +96,7 @@ You can go back from any part of the catalog, one certain message will be update
 For example, you have an “stale catalog” in your chat with the bot, because an admin removed some product and of course it is technically difficult to update all already received messages with catalogs, implementation will require a LOT of memory, storing the messageId of all catalogs in cache. 
 If you try to go to the personal page of "stale product", add it to your cart, if you already have its personal page open in the chat or amke an order with such an item: the bot will send you a corresponding message.
 
-![deleted product was picked exception](https://od.lk/s/NDZfNDA2NzgwMTFf/deleted%20product%20was%20picked%20exception.png)
+![deleted product was picked exception](screenshots/deleted%20product%20was%20picked%20exception.png)
 
 The same will be sent to user when ordering a deleted product in the cart.
 
@@ -113,22 +113,22 @@ To do this, on the product page, click the **add to cart** button, and the bot w
 Then you need to enter the quantity. Please note that if you enter a non-integer numeric when selecting pcs unit, the bot will display a corresponding message.
 integer when kg selected|integer when pcs selected
 :-:|:-:
-![integer in kg](https://od.lk/s/NDZfNDA2Nzc5MDNf/kg%20example.png)|![integer in pcs](https://od.lk/s/NDZfNDA2Nzc5MDRf/pcs%20example.png)
+![integer in kg](screenshots/kg%20example.png) | ![integer in pcs](screenshots/pcs%20example.png)
 
 Please note that the number can be indicated with a period or a comma, everything is thought out😁.
 
 If you add a product to your cart that is already in, it will be added to the existing one, **If the units of measurement match**. If not, the bot will send the appropriate message.
 
-![](https://od.lk/s/NDZfNDA2Nzc5MjBf/uniet%20exc.png)
+![](screenshots/uniet%20exc.png)
 
 You can always left from any step adding to a cart , just send "cancel" to the bot.
 
 <span id="cancellation"/>
-![cancellation](https://od.lk/s/NDZfNDA2Nzc5Mzlf/cancel.png)
+![cancellation](screenshots/cancel.png)
 
 For example, you are in the process of selecting units of measurement, but you pressed any other button that does not work in this state, then the bot will simply cancel the process and send the catalog again.
 
-![state exception](https://od.lk/s/NDZfNDA2Nzc5NjNf/state%20exc.png)
+![state exception](screenshots/state%20exc.png)
 
 In general, the bot catches a lot of exceptions, so that the bot does not break😇. It makes no sense to tell in detail about everything, as not to stretch this file 10 times.
 So, you have added several products to your cart.
@@ -140,12 +140,12 @@ If you accidentally added a product to your cart that you do not need or want to
 
 Empty cart | Cart with products
 :-:|:-:
-![Empty cart](https://od.lk/s/NDZfNDA3NDA2Mzlf/EmptyCArt.png)|![Cart with products](https://od.lk/s/NDZfNDA3NDA2Mzhf/cart.png)
+![Empty cart](screenshots/EmptyCArt.png) | ![Cart with products](screenshots/cart.png)
 
 Now click "Delete item from cart" and then enter the ordinal number of the product in your cart
 Removal process|Result
 :-:|:-:
-![](https://od.lk/s/NDZfNDA3NDA2MzZf/delete%202%20step.png) |![](https://od.lk/s/NDZfNDA3NDA2NDBf/deleted.png =650x)
+![deleted product was picked exception](screenshots/delete%202%20step.png) | ![Cart after deletion](screenshots/deleted.png =650x)
 
 If you want to completely empty your cart, just click the relevant button
 
@@ -155,7 +155,7 @@ If you want to completely empty your cart, just click the relevant button
 To make an order, you just need to click the "Make an order" button and follow the bot's instructions. Please note that the number is validated as Belarusian through a **regex** expression, but this changes very quickly to the type of numbers of any country.
 
 Example:
-![](https://od.lk/s/NDZfNDA3NDA3MTFf/checkout%203.png)
+![Make an order](screenshots/checkout%203.png)
 
 Done! Now the manager can call you and confirm the order.
 My client asked that the bot not calculate the price, because If you order goods by pcs, you don’t know how much they will weigh.
@@ -163,7 +163,7 @@ My client asked that the bot not calculate the price, because If you order goods
 You cannot order more than 15 products or more than 100 kilograms, the bot will warn you what to do.
 
 Example:
-![](https://od.lk/s/NDZfNDA3NDA5NTVf/call%20manager%20warn.png)
+![call manager warning](screenshots/call%20manager%20warn.png)
 
 The manager number is also very simply set in an [external file](#work-with-application.properties-file).
 
@@ -193,7 +193,7 @@ If this is done by a user and not an administrator, he will receive an error mes
 
 Correction proposal for admin | Non-admin user attempt to add
 :-:|:-:
- ![](https://od.lk/s/NDZfNDA3OTEyODlf/command%20mistake.png =500x)| ![](https://od.lk/s/NDZfNDA3OTEyOTJf/user%20trying%20to%20add%20Berry.png)
+![command mistake](screenshots/command%20mistake.png =500x) | ![user trying to add Berry](screenshots/user%20trying%20to%20add%20Berry.png)
 **Product successfully added:**
 <p align = "center">
 <img src="https://od.lk/s/NDZfNDA3OTEyNTNf/addBerry.png =400x" height = 300px />
@@ -206,11 +206,11 @@ If you are an admin, the product page will be different, you can delete the prod
 
 Example:
 
-![](https://od.lk/s/NDZfNDA3OTEzNjZf/Product%20page%20for%20an%20admin.png)
+![Product page for an admin](screenshots/Product%20page%20for%20an%20admin.png)
 
 Changing price process and its result:
 
-![](https://od.lk/s/NDZfNDA3OTEzNjdf/changing%20price%20result.png)
+![changing price result](screenshots/changing%20price%20result.png)
 
 The administrator can also cancel any process like [here](#cancellation)
 
@@ -221,12 +221,12 @@ To add a new admin, simply enter his chatId in the admin line. If there are seve
 To change the manager number, change the value of the corresponding line of the file.
 Also here you can indicate the fileId of the pictures of the corresponding product sections.
 
-![](https://od.lk/s/NDZfNDA3OTE0MzNf/appl%20pror.png)
+![application properties file](screenshots/appl%20pror.png)
 
 To get an fileId of a new image, send to the bot the image with a question mark.
 
 **Example:**
-![](https://od.lk/s/NDZfNDA3OTE0NDRf/how%20to%20get%20fileId%20example.png =400x)
+![how to get fileId example](screenshots/how%20to%20get%20fileId%20example.png =400x)
 
 All bot caches are cleared automatically (including  users carts).
 
@@ -235,7 +235,7 @@ All bot caches are cleared automatically (including  users carts).
 
 Updates of states, baskets, and receiving of messages are logged, as everything else.
 
-![](https://od.lk/s/NDZfNDA4NDE1NzNf/logs2.png)
+![logs](screenshots/logs2.png)
 
 ---
 <span id="receiving-a-client's-order"/>
@@ -244,7 +244,7 @@ Updates of states, baskets, and receiving of messages are logged, as everything 
 
 Admins receive orders in this format:
 
-![](https://od.lk/s/NDZfNDA4MjIxNTBf/Client%27s%20order.png)
+![Client's order](screenshots/Client%27s%20order.png)
 
 And after that they can immediately call to client and talk the details)
 
