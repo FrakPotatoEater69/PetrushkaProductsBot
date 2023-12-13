@@ -72,11 +72,12 @@ How to use the bot is, of course, described the first time you contact it, so yo
 Next, the user must select the required section.
 As an example, I give a catalog of vegetables and berries.
 As you can see, each section has its own picture, to change it - just replace the [fileId](#work-with-application.properties-file) of the [corresponding section](#work-with-application.properties-file), the bot will download and insert the picture automatically!
-
+<p align="center">
+	
 Empty vegetables catalog | Empty berries catalog
 :-: | :-:|
 <img src="screenshots/emptyVege.png" alt="VEGE" height = 300px /> | <img src="screenshots/emptyBerry.png" alt="BERRY" height = 300px/>
-
+</p>
 Here I will show you an example of an empty catalog. Only an admin can [add a product](#adding-a-new-product). To [add an admin](#work-with-application.properties-file), just add his chatId to the application.properties file.
 
 Here is an example of a berry catalog consisting of 1, 2 and 3 products respectively. The list builds **automatically**, you do not need to add rows and columns manually.
