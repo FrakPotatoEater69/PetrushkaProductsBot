@@ -145,7 +145,7 @@ Empty cart | Cart with products
 Now click "Delete item from cart" and then enter the ordinal number of the product in your cart
 Removal process|Result
 :-:|:-:
-![deleted product was picked exception](screenshots/delete%202%20step.png) | <img src="screenshots/deleted.png" height = 650px alt="Cart after deletion"/>
+![deleted product was picked exception](screenshots/delete%202%20step.png) | <img src="screenshots/deleted.png" alt="Cart after deletion"/>
 
 If you want to completely empty your cart, just click the relevant button
 
