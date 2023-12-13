@@ -161,7 +161,9 @@ If you want to completely empty your cart, just click the relevant button
 To make an order, you just need to click the "Make an order" button and follow the bot's instructions. Please note that the number is validated as Belarusian through a **regex** expression, but this changes very quickly to the type of numbers of any country.
 
 Example:
-![Make an order](screenshots/checkout%203.png)
+<p align="center">
+	<img src="screenshots/checkout%203.png" height = 400px />
+<\p>
 
 Done! Now the manager can call you and confirm the order.
 My client asked that the bot not calculate the price, because If you order goods by pcs, you don’t know how much they will weigh.
