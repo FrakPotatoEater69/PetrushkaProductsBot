@@ -134,7 +134,7 @@ For example, you are in the process of selecting units of measurement, but you p
 
 <p align="center">
 	<img src="screenshots/state%20exc.png" height = 400px />
-<\p>
+</p>
 	
 In general, the bot catches a lot of exceptions, so that the bot does not break😇. It makes no sense to tell in detail about everything, as not to stretch this file 10 times.
 So, you have added several products to your cart.
@@ -163,7 +163,7 @@ To make an order, you just need to click the "Make an order" button and follow t
 Example:
 <p align="center">
 	<img src="screenshots/checkout%203.png" height = 400px />
-<\p>
+</p>
 
 Done! Now the manager can call you and confirm the order.
 My client asked that the bot not calculate the price, because If you order goods by pcs, you don’t know how much they will weigh.
@@ -173,7 +173,7 @@ You cannot order more than 15 products or more than 100 kilograms, the bot will 
 Example:
 <p align="center">
 	<img src="screenshots/call%20manager%20warn.png" alt="call manager warning"/>
-<\p>
+</p>
 
 The manager number is also very simply set in an [external file](#work-with-application.properties-file).
 
@@ -203,11 +203,11 @@ If this is done by a user and not an administrator, he will receive an error mes
 
 Correction proposal for admin | Non-admin user attempt to add
 :-:|:-:
-![command mistake](screenshots/command%20mistake.png =500x) | ![user trying to add Berry](screenshots/user%20trying%20to%20add%20Berry.png)
+![command mistake](screenshots/command%20mistake.png) | ![user trying to add Berry](screenshots/user%20trying%20to%20add%20Berry.png)
 
 **Product successfully added:**
 <p align = "center">
-<img src="https://od.lk/s/NDZfNDA3OTEyNTNf/addBerry.png =400x" height = 300px />
+<img src="screenshots/addBerry.png =400x" height = 400px />
 </p>
 
 ---
@@ -216,8 +216,9 @@ Correction proposal for admin | Non-admin user attempt to add
 If you are an admin, the product page will be different, you can delete the product and/or edit its price.
 
 Example:
-
-![Product page for an admin](screenshots/Product%20page%20for%20an%20admin.png)
+<p align = "center">
+<img src="screenshots/Product%20page%20for%20an%20admin.png" height = 400px align="Product page for an admin"/>
+</p>
 
 Changing price process and its result:
 
