@@ -66,7 +66,7 @@ To get the main catalog, you need to use the relevant button.
 How to use the bot is, of course, described the first time you contact it, so you don’t need to read the readme file😁, but I don’t see the point in showing introductory messages and other not very important things.
 
 <p align="center">
-  <img src="screenshots/main%201.png" alt="main menu" />
+  <img src="screenshots/main%201.png" alt="main menu" height="400"/>
 </p>
 
 Next, the user must select the required section.
