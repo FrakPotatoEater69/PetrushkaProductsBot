@@ -127,6 +127,7 @@ If you add a product to your cart that is already in, it will be added to the ex
 You can always left from any step adding to a cart , just send "cancel" to the bot.
 
 <span id="cancellation"/>
+
 ![cancellation](screenshots/cancel.png)
 
 For example, you are in the process of selecting units of measurement, but you pressed any other button that does not work in this state, then the bot will simply cancel the process and send the catalog again.
