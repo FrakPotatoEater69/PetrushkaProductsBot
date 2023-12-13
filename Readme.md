@@ -87,16 +87,18 @@ Here is an example of a berry catalog consisting of 1, 2 and 3 products respecti
 <img src="screenshots/2%20ber.png" alt="BERRY 2" height = 300px />| <img src="screenshots/3%20ber.png" alt="BERRY 3" height = 300px />
 :-:|:-:
 
-<style>
-  table {
-    border-collapse: collapse;
-  }
-</style>
-
-|          |          |          |
-|:--------:|:--------:|:--------:|
-|          | <img src="screenshots/3%20ber.png" alt="BERRY 3" width="300px" height="246px" /> |          |
-| <img src="screenshots/1%20berry.png" alt="BERRY 1" width="300px" height="243.9px" /> |          | <img src="screenshots/2%20ber.png" alt="BERRY 2" width="300px" height="243.9px" /> |
+<table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <td style="border: none;"></td>
+    <td style="border: none;"><img src="screenshots/3%20ber.png" alt="BERRY 3" width="300px" height="246px" style="display: block; margin-left: auto; margin-right: auto;" /></td>
+    <td style="border: none;"></td>
+  </tr>
+  <tr>
+    <td style="border: none;"><img src="screenshots/1%20berry.png" alt="BERRY 1" width="300px" height="243.9px" style="display: block; margin-left: auto; margin-right: auto;" /></td>
+    <td style="border: none;"></td>
+    <td style="border: none;"><img src="screenshots/2%20ber.png" alt="BERRY 2" width="300px" height="243.9px" style="display: block; margin-left: auto; margin-right: auto;" /></td>
+  </tr>
+</table>
 
 
 
