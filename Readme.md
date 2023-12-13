@@ -171,7 +171,9 @@ My client asked that the bot not calculate the price, because If you order goods
 You cannot order more than 15 products or more than 100 kilograms, the bot will warn you what to do.
 
 Example:
-![call manager warning](screenshots/call%20manager%20warn.png)
+<p align="center">
+	<img src="screenshots/call%20manager%20warn.png" alt="call manager warning"/>
+<\p>
 
 The manager number is also very simply set in an [external file](#work-with-application.properties-file).
 
