@@ -132,8 +132,10 @@ You can always left from any step adding to a cart , just send "cancel" to the b
 
 For example, you are in the process of selecting units of measurement, but you pressed any other button that does not work in this state, then the bot will simply cancel the process and send the catalog again.
 
-![state exception](screenshots/state%20exc.png)
-
+<p align="center">
+	<img src="screenshots/state%20exc.png" height = 400px />
+<\p>
+	
 In general, the bot catches a lot of exceptions, so that the bot does not break😇. It makes no sense to tell in detail about everything, as not to stretch this file 10 times.
 So, you have added several products to your cart.
 
