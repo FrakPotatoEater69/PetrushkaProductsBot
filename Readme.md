@@ -87,7 +87,9 @@ Here is an example of a berry catalog consisting of 1, 2 and 3 products respecti
 The product page consists of it's name, price and description, as well as a personal picture, which is stored in the database. How to [add a product](#adding-a-new-product) is discussed in the relevant chapter.
 I would like to note that the personal product page for the admin and for the user is [different](#editing-a-product).
 
-![cranberry personal page](screenshots/cran%20pers%20usr.png)
+<p align="center">
+  <img src="screenshots/cran%20pers%20usr.png" alt="cranberry personal page" height="400" />
+</p>
 
 You can go back from any part of the catalog, one certain message will be updated so the chat will not be clogged.
 
