@@ -240,8 +240,8 @@ Also here you can indicate the fileId of the pictures of the corresponding produ
 To get an fileId of a new image, send to the bot the image with a question mark.
 
 **Example:**
+<img src="screenshots/how%20to%20get%20fileId%20example.png" height=400px alt="how to get fileId example"/>
 
-![how to get fileId example](screenshots/how%20to%20get%20fileId%20example.png)
 
 All bot caches are cleared automatically (including  users carts).
 
