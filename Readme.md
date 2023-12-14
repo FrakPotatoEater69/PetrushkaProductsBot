@@ -207,7 +207,7 @@ Correction proposal for admin | Non-admin user attempt to add
 
 **Product successfully added:**
 <p align = "center">
-<img src="screenshots/addBerry.png =400x" height = 400px />
+<img src="screenshots/addBerry.png" height = 400px alt="Product was added"/>
 </p>
 
 ---
@@ -217,12 +217,14 @@ If you are an admin, the product page will be different, you can delete the prod
 
 Example:
 <p align = "center">
-<img src="screenshots/Product%20page%20for%20an%20admin.png" height = 400px align="Product page for an admin"/>
+<img src="screenshots/Product%20page%20for%20an%20admin.png" height = 400px alt="Product page for an admin"/>
 </p>
 
 Changing price process and its result:
 
-![changing price result](screenshots/changing%20price%20result.png)
+<p align = "center">
+<img src="screenshots/changing%20price%20result.png" height = 400px alt="changing price result"/>
+</p>
 
 The administrator can also cancel any process like [here](#cancellation)
 
