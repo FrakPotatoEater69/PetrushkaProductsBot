@@ -223,7 +223,7 @@ Example:
 Changing price process and its result:
 
 <p align = "center">
-<img src="screenshots/changing%20price%20result.png" height=400px width=465px alt="changing price result"/>
+<img src="screenshots/changing%20price%20result.png" height=540px width=465px alt="changing price result"/>
 </p>
 
 The administrator can also cancel any process like [here](#cancellation)
