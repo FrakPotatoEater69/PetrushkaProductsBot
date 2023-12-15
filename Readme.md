@@ -216,7 +216,7 @@ Correction proposal for admin | Non-admin user attempt to add
 If you are an admin, the product page will be different, you can delete the product and/or edit its price.
 
 Example:
-<br>
+
 <p align = "center">
 <img src="screenshots/Product%20page%20for%20an%20admin.png" height = 400px alt="Product page for an admin"/>
 </p>
@@ -240,7 +240,8 @@ Also here you can indicate the fileId of the pictures of the corresponding produ
 
 To get an fileId of a new image, send to the bot the image with a question mark.
 
-**Example:**
+Example:
+
 <img src="screenshots/how%20to%20get%20fileId%20example.png" height=400px alt="how to get fileId example"/>
 
 
