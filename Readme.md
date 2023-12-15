@@ -15,7 +15,7 @@ Petrushka Products Bot  is a Telegram bot designed to help users browse, select,
 		- [Checkout process](#checkout-process)
 	 + [Admin side](#admin-side)
 		 - [Adding a new product](#adding-a-new-product)
-		 - [Aditing a product](#editing-a-product)
+		 - [Editing a product](#editing-a-product)
 		 - [Work with configuration file](#work-with-application.properties-file)
 		 - [Logs](#logs)
 		 - [Receiving a client's order](#receiving-a-client's-order)
