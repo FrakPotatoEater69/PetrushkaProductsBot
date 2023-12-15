@@ -216,6 +216,7 @@ Correction proposal for admin | Non-admin user attempt to add
 If you are an admin, the product page will be different, you can delete the product and/or edit its price.
 
 Example:
+
 <p align = "center">
 <img src="screenshots/Product%20page%20for%20an%20admin.png" height = 400px alt="Product page for an admin"/>
 </p>
