@@ -43,11 +43,11 @@ I ask you to fully assess the functionality of the bot, this is my biggest proje
 
 ---------------
 ### Technologies
-The bot was written in Java <img src="https://github.com/devicons/devicon/blob/master/icons/java/java-original.svg" title="Java" alt="Java" width="40" height="40"/>, using the Spring Framework <img src="https://github.com/devicons/devicon/blob/master/icons/spring/spring-original.svg" title="Spring" alt="Spring" width="40" height="40"/>, Hibernate.
-Database - PostgreSQL <img src="https://github.com/devicons/devicon/blob/master/icons/spring/spring-original.svg" title="PostgreSQL" alt="PostgreSQL" width="40" height="40"/>. Postman and ngrok are used for testing.
+The bot was written in Java <img src="https://github.com/devicons/devicon/blob/master/icons/java/java-original.svg" title="Java" alt="Java" width="20" height="20"/>, using the Spring Framework <img src="https://github.com/devicons/devicon/blob/master/icons/spring/spring-original.svg" title="Spring" alt="Spring" width="20" height="20"/>, Hibernate.
+Database - PostgreSQL <img src="https://github.com/devicons/devicon/blob/master/icons/postgresql/postgresql-original.svg" title="PostgreSQL" alt="PostgreSQL" width="20" height="20"/>. Postman and ngrok are used for testing.
 The Telegram bot work on REST requests.
 
-I decided not to use Redis <img src="https://github.com/devicons/devicon/blob/master/icons/redis/redis-original.svg" title="Redis" alt="Redis" width="40" height="40"/> to implement the cache due to the fact that when uploading to Heroku <img src="https://github.com/devicons/devicon/blob/master/icons/heroku/heroku-plain.svg" title="Heroku" alt="Heroku" width="40" height="40"/>, I would have to pay for another container. So, I implemented a self-cleaning cache using HashMap and the @Scheduled annotation from the Spring framework.
+I decided not to use Redis <img src="https://github.com/devicons/devicon/blob/master/icons/redis/redis-original.svg" title="Redis" alt="Redis" width="20" height="20"/> to implement the cache due to the fact that when uploading to Heroku <img src="https://github.com/devicons/devicon/blob/master/icons/heroku/heroku-plain.svg" title="Heroku" alt="Heroku" width="20" height="20"/>, I would have to pay for another container. So, I implemented a self-cleaning cache using HashMap and the @Scheduled annotation from the Spring framework.
 
 ---------
 ### Key Features
