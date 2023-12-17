@@ -1,6 +1,6 @@
 ﻿# Telegram bot for an online store of vegetables and fruits "Petrushka"
 
-Petrushka Products Bot  is a Telegram bot designed to help users browse, select, and order fresh 🥦 vegetables, fruits, herbs and berries. The bot provides a user-friendly interface to explore the catalog, add items to the cart, and place orders for delivery.
+Petrushka Products Bot  is a Telegram bot designed to help users browse, select, and order fresh vegetables 🥦, fruits 🍍, herbs 🌿 and berries 🍓. The bot provides a user-friendly interface to explore the catalog, add items to the cart, and place orders for delivery.
 
 ## Table of Contents
 * [Backstory](#backstory)
