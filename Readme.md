@@ -270,7 +270,7 @@ If a product is no longer on sale, the bot will work as in <a href="#stale-produ
 ## Conclusion
 
 Thank you for your interest in my bot, if you have any questions or want to contact me, feel free to text me on LinkedIn
-[Aliaksei Shakhner | LinkedIn](https://www.linkedin.com/in/aliaksei-shakhner-25122b247/) or[telegram](https://t.me/pressure_sensor)
+[Aliaksei Shakhner | LinkedIn](https://www.linkedin.com/in/aliaksei-shakhner-25122b247/) or [telegram](https://t.me/pressure_sensor)
 
 
 
