@@ -43,7 +43,7 @@ I ask you to fully assess the functionality of the bot, this is my biggest proje
 
 ---------------
 ### Technologies
-The bot was written in Java![Java](https://github.com/devicons/devicon/blob/master/icons/java/java-original-wordmark.svg), using the Spring Framework, Hibernate.
+The bot was written in Java <img src="https://github.com/devicons/devicon/blob/master/icons/java/java-original-wordmark.svg" title="Java" alt="Java" width="40" height="40"/>, using the Spring Framework, Hibernate.
 Database - PostgreSQL. Postman and ngrok are used for testing.
 The Telegram bot work on REST requests.
 
