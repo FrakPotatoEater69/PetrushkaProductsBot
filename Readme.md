@@ -43,9 +43,11 @@ I ask you to fully assess the functionality of the bot, this is my biggest proje
 
 ---------------
 ### Technologies
-The bot was written in Java, using the Spring Framework, Hibernate.
+The bot was written in Java![Java](https://github.com/devicons/devicon/blob/master/icons/java/java-original-wordmark.svg), using the Spring Framework, Hibernate.
 Database - PostgreSQL. Postman and ngrok are used for testing.
 The Telegram bot work on REST requests.
+
+I decided not to use Redis to implement the cache due to the fact that when uploading to Heroku, I would have to pay for another container. So, I implemented a self-cleaning cache using HashMap and the @Scheduled annotation from the Spring framework.
 
 ---------
 ### Key Features
