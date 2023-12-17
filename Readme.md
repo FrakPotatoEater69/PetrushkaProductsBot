@@ -1,6 +1,6 @@
-﻿# Telegram bot for an online store of vegetables and fruits "Petrushka"
+﻿# Telegram bot for an online store of vegetables and fruits "Piatrushka"
 
-Petrushka Products Bot  is a Telegram bot designed to help users browse, select, and order fresh vegetables 🥦, fruits 🍍, herbs 🌿 and berries 🍓. The bot provides a user-friendly interface to explore the catalog, add items to the cart, and place orders for delivery.
+Piatrushka Products Bot is a Telegram bot designed to help users browse, select, and order fresh vegetables 🥦, fruits 🍍, herbs 🌿 and berries 🍓. The bot provides a user-friendly interface to explore the catalog, add items to the cart, and place orders for delivery.
 
 ## Table of Contents
 * [Backstory](#backstory)
@@ -40,6 +40,8 @@ To add, remove products, edit their prices, the administrator does not need to u
 The bot is also equipped with an anti-spam system and does not break down when changing incompatible states.
 Also, the entire cache system is made self-cleaning, so the administrator does not have to worry about it.
 I ask you to fully assess the functionality of the bot, this is my biggest project.
+
+It is called "Piatrushka" because in Belarussian it means parsley.
 
 ---------------
 ### Technologies
