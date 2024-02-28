@@ -19,7 +19,7 @@ import pl.shakhner.PetrushkaProductsBot.dto.ItemPriceTitleDTO;
 import pl.shakhner.PetrushkaProductsBot.exceptions.CartIsEmptyException;
 import pl.shakhner.PetrushkaProductsBot.exceptions.ItemNotFoundException;
 import pl.shakhner.PetrushkaProductsBot.models.Item;
-import pl.shakhner.PetrushkaProductsBot.services.ItemService;
+import pl.shakhner.PetrushkaProductsBot.services.servicesImpl.ItemServiceImpl;
 
 import java.io.ByteArrayInputStream;
 import java.util.Comparator;
@@ -82,11 +82,11 @@ public class MessageUtils {
     private static final String CHOOSE_UNIT = "How do you want to place an order?\nIn kilograms or per piece?\n\nTo cancel, send me 'Cancel'.";
 
 
-    private final ItemService itemService;
+    private final ItemServiceImpl itemService;
     private final Extractor chatIdExtractor;
     private final UserDataCache userDataCache;
 
-    public MessageUtils(ItemService itemService, Extractor chatIdExtractor, UserDataCache userDataCache, KeyboardUtils keyboardUtils) {
+    public MessageUtils(ItemServiceImpl itemService, Extractor chatIdExtractor, UserDataCache userDataCache, KeyboardUtils keyboardUtils) {
         this.itemService = itemService;
         this.chatIdExtractor = chatIdExtractor;
         this.userDataCache = userDataCache;

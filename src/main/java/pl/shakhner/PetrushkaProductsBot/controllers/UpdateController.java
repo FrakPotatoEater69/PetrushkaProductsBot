@@ -1,6 +1,7 @@
 package pl.shakhner.PetrushkaProductsBot.controllers;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.methods.send.SendPhoto;
@@ -20,6 +21,7 @@ import pl.shakhner.PetrushkaProductsBot.exceptions.*;
 import pl.shakhner.PetrushkaProductsBot.models.User;
 import pl.shakhner.PetrushkaProductsBot.services.ItemService;
 import pl.shakhner.PetrushkaProductsBot.services.UserService;
+import pl.shakhner.PetrushkaProductsBot.services.servicesImpl.ItemServiceImpl;
 import pl.shakhner.PetrushkaProductsBot.util.*;
 
 import java.util.List;
@@ -34,12 +36,14 @@ public class UpdateController {
 
     private final UserDataCache userDataCache;
     private final AdminValidator adminValidator;
+
     private final ItemService itemService;
     private final LogUtils logUtils;
     private final AdminDataCache adminDataCache;
     private final UserService userService;
 
-    public UpdateController(MessageUtils messageUtils, KeyboardUtils keyboardUtils, UserDataCache userDataCache, AdminValidator adminValidator, ItemService itemService, LogUtils logUtils, Extractor chatIdExtractor, AdminDataCache adminDataCache, UserService userService) {
+    @Autowired
+    public UpdateController(MessageUtils messageUtils, KeyboardUtils keyboardUtils, UserDataCache userDataCache, AdminValidator adminValidator, ItemService itemService, LogUtils logUtils, AdminDataCache adminDataCache, UserService userService) {
         this.messageUtils = messageUtils;
         this.keyboardUtils = keyboardUtils;
         this.userDataCache = userDataCache;

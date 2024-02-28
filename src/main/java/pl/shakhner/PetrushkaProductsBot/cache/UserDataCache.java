@@ -1,6 +1,7 @@
 package pl.shakhner.PetrushkaProductsBot.cache;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import pl.shakhner.PetrushkaProductsBot.botAPI.BotState;
@@ -12,6 +13,7 @@ import pl.shakhner.PetrushkaProductsBot.exceptions.CartNotContainsSuchOrdinalNum
 import pl.shakhner.PetrushkaProductsBot.exceptions.CartOutOfBoundException;
 import pl.shakhner.PetrushkaProductsBot.exceptions.IllegalAmountException;
 import pl.shakhner.PetrushkaProductsBot.services.ItemService;
+import pl.shakhner.PetrushkaProductsBot.services.servicesImpl.ItemServiceImpl;
 import pl.shakhner.PetrushkaProductsBot.util.*;
 
 import java.util.HashMap;
@@ -27,6 +29,7 @@ public class UserDataCache {
     private final ItemService itemService;
     private final Extractor chatIdExtractor;
 
+    @Autowired
     public UserDataCache(LogUtils logUtils, ItemService itemService, Extractor chatIdExtractor) {
         this.logUtils = logUtils;
         this.itemService = itemService;

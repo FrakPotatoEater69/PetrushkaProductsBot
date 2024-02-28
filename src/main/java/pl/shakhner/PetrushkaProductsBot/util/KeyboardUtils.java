@@ -1,7 +1,7 @@
 package pl.shakhner.PetrushkaProductsBot.util;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboard;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMarkup;
@@ -11,6 +11,7 @@ import pl.shakhner.PetrushkaProductsBot.botAPI.ItemType;
 import pl.shakhner.PetrushkaProductsBot.botAPI.Unit;
 import pl.shakhner.PetrushkaProductsBot.models.Item;
 import pl.shakhner.PetrushkaProductsBot.services.ItemService;
+import pl.shakhner.PetrushkaProductsBot.services.servicesImpl.ItemServiceImpl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +23,7 @@ public class KeyboardUtils {
     private final AdminValidator adminValidator;
     private final ItemService itemService;
 
+    @Autowired
     public KeyboardUtils(ButtonUtils buttonUtils, AdminValidator adminValidator, ItemService itemService) {
         this.buttonUtils = buttonUtils;
         this.adminValidator = adminValidator;
