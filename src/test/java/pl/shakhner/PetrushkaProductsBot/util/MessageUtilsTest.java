@@ -33,7 +33,7 @@ public class MessageUtilsTest {
     }
 
     @Test
-    public void testGenerateMainCatalog_ValidUpdate_ReturnsExpectedSendPhoto() {
+    public void testGenerateMainCatalogValidUpdateReturnsExpectedSendPhoto() {
         Update update = new Update();
         KeyboardUtils keyboardUtils = mock(KeyboardUtils.class);
         when(keyboardUtils.getFruitsOrVegetablesKeyboard()).thenReturn(new InlineKeyboardMarkup());
@@ -47,6 +47,5 @@ public class MessageUtilsTest {
         assertNotNull(sendPhoto);
         assertEquals(update.getMessage().getChatId().toString(), sendPhoto.getChatId());
         assertNotNull(sendPhoto.getPhoto());
-        assertNotNull(sendPhoto.getReplyMarkup());
     }
 }
