@@ -671,7 +671,7 @@ public class UpdateController {
         executeMessage(editMessageCaption);
     }
 
-    private void setMainKeyboardAndExecute(SendMessage sendMessage) {
+    protected void setMainKeyboardAndExecute(SendMessage sendMessage) {
         sendMessage.setReplyMarkup(keyboardUtils.getMainKeyboard());
         executeMessage(sendMessage);
     }
