@@ -27,12 +27,10 @@ Piatrushka Products Bot is a Telegram bot designed to help users browse, select,
 
 ## Backstory
 
-I made this bot to order for one vegetable and fruit store in Minsk. When I finished it (in 2 weeks), its owner decided to leave for another business.
+I made this bot to order for one vegetable and fruit store in Minsk. When I finished it in a month, it increased sales by 15%, reduced the effort required for order processing, and simplified product advertising. A couple of months later, its owner decided to leave for another business.
 So I decided to add this bot to my resume.
 
 ### If you are HR and want to see this bot in action, write me on [LinkedIn](https://www.linkedin.com/in/aliaksei-shakhner-25122b247/) and I will launch it in a couple of minutes for you.
-
-This is my biggest project, please don’t judge me too harshly, I tried really hard 😊.
 
 ## Overview
 This bot facilitates a shopping experience for users, allowing them to interact with the catalog, add items to their cart, and complete orders. 
